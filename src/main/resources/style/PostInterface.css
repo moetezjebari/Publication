@@ -1,0 +1,61 @@
+/* Style général */
+VBox {
+    -fx-padding: 15;
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+
+}
+
+.profile-picture {
+    -fx-clip: circle(50%);
+    -fx-background-radius: 50%; /* Arrondir les bords de l'image */
+    -fx-border-color: transparent; /* Pas de bordure autour de l'image */
+    -fx-border-width: 0;
+
+}
+
+/* Conteneur du champ de texte */
+.input-container {
+    -fx-background-color: white;
+    -fx-padding: 8;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+.root {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15px;
+}
+
+.username {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.visibility {
+    -fx-font-size: 12px;
+    -fx-text-fill: gray;
+}
+
+.text-area {
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 40px;
+}
+
+.post-button {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 15px;
+    -fx-border-radius: 5px;
+}
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" spacing="10" style="-fx-padding: 10; -fx-background-color: #f4f4f4; -fx-border-color: #ccc; -fx-border-radius: 5px;"
+fx:controller="org.example.Controller.PostItemController"
+>
+
+
+
+    <ImageView fx:id="userAvatar" fitWidth="50" fitHeight="50"/>
+    <VBox spacing="5">
+        <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        <Label fx:id="contentLabel" wrapText="true"/>
+        <Label fx:id="categoryLabel" style="-fx-text-fill: gray;"/>
+        <ImageView fx:id="postImage" fitWidth="100" fitHeight="100" visible="false"/>
+        <HBox spacing="10">
+            <Button text="Modifier" fx:id="editButton"    />
+            <Button text="Supprimer" fx:id="deleteButton" />
+        </HBox>
+    </VBox>
+</HBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"  styleClass="root"
+            stylesheets="@../style/PostInterface.css"
+ fx:controller="org.example.Controller.post">
+    <VBox spacing="10" alignment="TOP_LEFT" layoutX="10" layoutY="10" prefWidth="600" prefHeight="400">
+        <!-- Profil et visibilité -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/p.png" />
+            </ImageView>
+            <VBox>
+                <Label text="Moetez Jebari" styleClass="username" />
+                <Label text="Visibilité : Tout le monde" styleClass="visibility" />
+            </VBox>
+        </HBox>
+
+        <!-- Champ de texte -->
+        <TextArea fx:id="text" promptText="De quoi souhaitez-vous discuter ?" wrapText="true" styleClass="text-area" />
+        <TextField fx:id="imageUrlField" promptText="URL de l'image" editable="false"/>
+        <ImageView fx:id="imageView" fitWidth="200" fitHeight="200" preserveRatio="true"/>
+        <!-- Boutons et icônes -->
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Button text="😊" styleClass="icon-button" />
+            <Button text="🖼️" styleClass="icon-button" style="-fx-cursor: hand;" onAction="#AddPicture"/>
+            <Button text="📅" styleClass="icon-button" />
+            <Button text="⚙️" styleClass="icon-button" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="Post"  styleClass="post-button" onAction="#PostAdd" fx:id="post"  />
+            <Button text="Delete"  styleClass="post-button" onAction="#handleDeletePost" fx:id="Delete"  />
+
+
+        </HBox>
+    </VBox>
+</AnchorPane>
