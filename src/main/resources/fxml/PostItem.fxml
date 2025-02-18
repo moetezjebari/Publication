@@ -5,6 +5,7 @@
 <?import javafx.scene.image.*?>
 
 <HBox xmlns:fx="http://javafx.com/fxml/1" spacing="10" style="-fx-padding: 10; -fx-background-color: #f4f4f4; -fx-border-color: #ccc; -fx-border-radius: 5px;"
+fx:controller="org.example.Controller.PostItemController"
 >
 
 

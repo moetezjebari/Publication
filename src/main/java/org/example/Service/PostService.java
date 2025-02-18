@@ -58,11 +58,11 @@ public class PostService {
                 posts.add(new Post(
                         rs.getInt("post_id"),
                         rs.getInt("user_id"),
-                        rs.getString("title"),
-                        rs.getString("content"),
                         rs.getString("image_url"),
-                        rs.getString("created_at"),
-                        rs.getString("categorie")
+                        rs.getString("title"),
+                        rs.getString("categorie"),
+                        rs.getString("content"),
+                        rs.getString("created_at")
                 ));
             }
         } catch (Exception e) {

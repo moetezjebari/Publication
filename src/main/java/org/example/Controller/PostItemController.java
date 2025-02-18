@@ -19,25 +19,23 @@ public class PostItemController {
     private Post post; // Stocke les données du post
 
     public void setPostData(Post post) {
-
+        if (post == null) return;
 
         this.post = post;
-        titleLabel.setText(post.getTitle());
-        contentLabel.setText(post.getContent());
-        categoryLabel.setText(post.getCategory());
+        titleLabel.setText(post.getTitle() != null ? post.getTitle() : "");
+        contentLabel.setText(post.getContent() != null ? post.getContent() : "");
+        categoryLabel.setText(post.getCategory() != null ? post.getCategory() : "");
 
-        // Charger l'image du post si elle existe
+        // Vérification de l'image
         if (post.getImage() != null && !post.getImage().isEmpty()) {
-            postImage.setImage(new Image(post.getImage()));
-            postImage.setVisible(true);
+            try {
+                postImage.setImage(new Image(post.getImage()));
+                postImage.setVisible(true);
+            } catch (Exception e) {
+                postImage.setVisible(false);
+            }
         } else {
             postImage.setVisible(false);
         }
-
-        // Charger l'avatar (par défaut ou depuis la base)
-
-
-            userAvatar.setImage(new Image("/src/main/resources/images/p.png")); // Avatar par défaut
-
     }
 }

@@ -20,15 +20,17 @@ public class PostListController {
     }
 
     private void loadPostsFromDatabase() {
+
         List<Post> posts = PostService.getAllPosts();
         postsContainer.getChildren().clear();
 
         for (Post post : posts) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/View/PostItem.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/PostItem.fxml"));
                 Parent postNode = loader.load();
 
                 PostItemController controller = loader.getController();
+                System.out.println("Loading posts from database");
                 controller.setPostData(post);
 
                 // Ajoute l'élément dans le GridPane avec les coordonnées
