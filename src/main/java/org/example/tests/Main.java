@@ -21,7 +21,6 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/PostList.fxml"));
             Parent root = null;
             try {
-
                 root = loader.load();
                 System.out.println("PostList.fxml chargé avec succès !");
 

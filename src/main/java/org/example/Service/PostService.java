@@ -61,8 +61,8 @@ public class PostService {
                         rs.getString("title"),
                         rs.getString("content"),
                         rs.getString("image_url"),
-                        rs.getString("category"),
-                        rs.getString("category")
+                        rs.getString("created_at"),
+                        rs.getString("categorie")
                 ));
             }
         } catch (Exception e) {

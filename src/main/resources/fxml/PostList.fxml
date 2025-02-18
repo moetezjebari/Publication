@@ -6,13 +6,17 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             prefHeight="400.0" prefWidth="600.0"
+            fx:controller="org.example.Controller.PostListController"
             >
-
     <!-- ScrollPane pour les publications -->
     <ScrollPane fitToWidth="true" layoutX="10" layoutY="10" prefWidth="600" prefHeight="400">
-        <VBox fx:id="postsContainer" spacing="10" padding="10">
-            <!-- Les posts seront ajoutés dynamiquement ici -->
-        </VBox>
+        <GridPane fx:id="postsContainer" hgap="10" vgap="10">
+                    <!-- Les posts seront ajoutés dynamiquement ici -->
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+        </GridPane>
     </ScrollPane>
 
 </AnchorPane>
